@@ -106,11 +106,11 @@ Genoverse.Track.Model.File.LRGBED = Genoverse.Track.Model.File.BED.extend({
                 thickFeature = $.extend({}, subfeature, { end: feature.thickEnd, height: thickHeight });
 
                 subfeatures = subfeatures.concat([ thickFeature, thinFeature ]);
-              }else{
+              } else{
                 // thickBlock lies within subfeature, split into 3 - thin | thick | thin
                 // the least possible case but lets be prepared for the outliers
-                thinFeature1 = $.extend({}, subfeature, { end: feature.thickStart });
-                thinFeature2 = $.extend({}, subfeature, { start: feature.thickEnd });
+                thinFeature1 = $.extend({}, subfeature, { end: feature.thickStart, color: false, borderColor: feature.color });
+                thinFeature2 = $.extend({}, subfeature, { start: feature.thickEnd, color: false, borderColor: feature.color });
                 thickFeature = { start: feature.thickStart, end: feature.thickEnd, height: thickHeight };
 
                 subfeatures = subfeatures.concat([ thinFeature1, thickFeature, thinFeature2 ]);
