@@ -56,11 +56,7 @@ Genoverse.Track.Model.File.LRGBED = Genoverse.Track.Model.File.BED.extend({
         
         if (len > 3) { feature.score  = parseFloat(fields[4], 10); }
 
-      
-        if (fields[6]) {
-          feature.color = '#00BB00';
-        }
-        else if (fields[8]) {
+        if (fields[8] && fields[8] != '' && fields[8] != 0) {
           feature.color = 'rgb(' + fields[8] + ')';
         } else {
           feature.color = '#009900';
