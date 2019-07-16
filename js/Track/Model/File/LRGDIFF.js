@@ -9,7 +9,7 @@ Genoverse.Track.Model.File.LRGDIFF = Genoverse.Track.Model.File.extend({
         continue;
       }
 
-      var colour = '#004400';
+      var colour = '#333';
       var labelColour = '#FFFFFF';
       var label = '';
       if (fields[4] == 'mismatch') {

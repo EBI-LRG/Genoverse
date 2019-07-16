@@ -42,7 +42,7 @@ Genoverse.Track.Model.File.LRGBED = Genoverse.Track.Model.File.BED.extend({
  
         feature = {
           chr             : chr,
-          start           : parseInt(fields[1], 10),
+          start           : parseInt(fields[1], 10) + 1, // Start in BED format is 0 based
           end             : parseInt(fields[2], 10),
           strand          : strand,
           strand_string   : strand_string,
